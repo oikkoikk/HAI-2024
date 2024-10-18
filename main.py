@@ -30,5 +30,5 @@ for image_path in images:
     except:
         print('실패. 왜? 모름.')
 
-with open("output.txt", "w") as f:
-    f.write(out)
+# with open("output.txt", "w") as f:
+#     f.write(out)
