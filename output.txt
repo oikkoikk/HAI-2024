@@ -9,7 +9,7 @@ GenerateContentResponse(
           "content": {
             "parts": [
               {
-                "text": "\ud559\ubc88: 2451321\n\uc774\ub984: \uac15\ud61c\ub9b0\n\ud559\uacfc: \uc9c0\uc704\uc0dd\uacfc(1)\n\uc7ac\ud559\uc5ec\ubd80: \uc54c \uc218 \uc5c6\uc74c \n"
+                "text": "'\ud559\ubc88: 2451321, \uc774\ub984: \uac15\ud61c\ub9b0, \ud559\uacfc: \uc9c0\uc704\uc0dd\uacfc(1), \uc7ac\ud559\uc5ec\ubd80: \uc7ac\ud559' \n"
               }
             ],
             "role": "model"
@@ -37,9 +37,9 @@ GenerateContentResponse(
         }
       ],
       "usage_metadata": {
-        "prompt_token_count": 374,
-        "candidates_token_count": 39,
-        "total_token_count": 413
+        "prompt_token_count": 410,
+        "candidates_token_count": 37,
+        "total_token_count": 447
       }
     }),
 )
@@ -55,7 +55,7 @@ GenerateContentResponse(
           "content": {
             "parts": [
               {
-                "text": "\ud559\ubc88: 2300010\n\uc774\ub984: \ubaa8\uc9c0\ud61c\n\ud559\uacfc: \uc18c\ud504\ud2b8\uc6e8\uc5b4\uc735\ud569\uacfc(2)\n\uc7ac\ud559\uc5ec\ubd80: 2\ud559\ub144 C\ubc18 \n"
+                "text": "\ud559\ubc88: 2300010, \uc774\ub984: \uc54c \uc218 \uc5c6\uc74c, \ud559\uacfc: \uc18c\ud504\ud2b8\uc6e8\uc5b4\uc735\ud569\uacfc(2), \uc7ac\ud559\uc5ec\ubd80: \uc7ac\ud559 \n"
               }
             ],
             "role": "model"
@@ -83,9 +83,9 @@ GenerateContentResponse(
         }
       ],
       "usage_metadata": {
-        "prompt_token_count": 374,
-        "candidates_token_count": 45,
-        "total_token_count": 419
+        "prompt_token_count": 410,
+        "candidates_token_count": 40,
+        "total_token_count": 450
       }
     }),
 )
@@ -101,7 +101,7 @@ GenerateContentResponse(
           "content": {
             "parts": [
               {
-                "text": "\ud559\ubc88: 2401010\n\uc774\ub984: \ud33d\ud558\ub2c8\n\ud559\uacfc: \uc2e4\ubb34\uc77c\ubcf8\uc5b4\uacfc(1)\n\uc7ac\ud559\uc5ec\ubd80: \uc54c \uc218 \uc5c6\uc74c \n"
+                "text": "\ud559\ubc88: 2401010, \uc774\ub984: \ud314\ud558\ub2c8, \ud559\uacfc: \uc2e4\ubb34\uc77c\ubcf8\uc5b4\uacfc(1), \uc7ac\ud559\uc5ec\ubd80: \uc7ac\ud559 \n"
               }
             ],
             "role": "model"
@@ -129,9 +129,9 @@ GenerateContentResponse(
         }
       ],
       "usage_metadata": {
-        "prompt_token_count": 374,
-        "candidates_token_count": 41,
-        "total_token_count": 415
+        "prompt_token_count": 410,
+        "candidates_token_count": 37,
+        "total_token_count": 447
       }
     }),
 )
@@ -149,8 +149,8 @@ GenerateContentResponse(
         }
       ],
       "usage_metadata": {
-        "prompt_token_count": 374,
-        "total_token_count": 374
+        "prompt_token_count": 410,
+        "total_token_count": 410
       }
     }),
 )
@@ -166,7 +166,7 @@ GenerateContentResponse(
           "content": {
             "parts": [
               {
-                "text": "\ud559\ubc88: 2300123\n\uc774\ub984: \uae40\ubbfc\uc11d\n\ud559\uacfc: \uc2e4\ubb34\uc601\uc5b4\uacfc(2)\n\uc7ac\ud559\uc5ec\ubd80: \uc7ac\ud559  \n"
+                "text": "\ud559\ubc88: 2300123, \uc774\ub984: \uae40\ubbfc\uc11d, \ud559\uacfc: \uc2e4\ubb34\uc601\uc5b4\uacfc(2), \uc7ac\ud559\uc5ec\ubd80: \uc7ac\ud559 \n"
               }
             ],
             "role": "model"
@@ -194,9 +194,9 @@ GenerateContentResponse(
         }
       ],
       "usage_metadata": {
-        "prompt_token_count": 374,
-        "candidates_token_count": 37,
-        "total_token_count": 411
+        "prompt_token_count": 410,
+        "candidates_token_count": 35,
+        "total_token_count": 445
       }
     }),
 )
@@ -212,7 +212,7 @@ GenerateContentResponse(
           "content": {
             "parts": [
               {
-                "text": "\ud559\ubc88: 2300123\n\uc774\ub984: \uae40\uc18c\uc724\n\ud559\uacfc: \uc2e4\ubb34\uc601\uc5b4\uacfc(2)\n\uc7ac\ud559\uc5ec\ubd80: 2\ud559\ub144 C\ubc18 \n"
+                "text": "\ud559\ubc88: 2300123, \uc774\ub984: \uae40\uc18c\uc724, \ud559\uacfc: \uc2e4\ubb34\uc601\uc5b4\uacfc(2), \uc7ac\ud559\uc5ec\ubd80: \uc7ac\ud559 \n"
               }
             ],
             "role": "model"
@@ -240,9 +240,9 @@ GenerateContentResponse(
         }
       ],
       "usage_metadata": {
-        "prompt_token_count": 374,
-        "candidates_token_count": 41,
-        "total_token_count": 415
+        "prompt_token_count": 410,
+        "candidates_token_count": 35,
+        "total_token_count": 445
       }
     }),
 )
@@ -258,7 +258,7 @@ GenerateContentResponse(
           "content": {
             "parts": [
               {
-                "text": "\ud559\ubc88: 2400323\n\uc774\ub984: \uc774\ud558\ub9b0\n\ud559\uacfc: \uc6b4\uc608\ucc3d\uc791\uacfc(1)\n\uc7ac\ud559\uc5ec\ubd80: \uc54c \uc218 \uc5c6\uc74c \n"
+                "text": "\ud559\ubc88: 2400323, \uc774\ub984: \uc774\ud558\ub9b0, \ud559\uacfc: \uc6b4\uc608\ucc3d\uc791\uacfc(1), \uc7ac\ud559\uc5ec\ubd80: \uc7ac\ud559"
               }
             ],
             "role": "model"
@@ -286,9 +286,9 @@ GenerateContentResponse(
         }
       ],
       "usage_metadata": {
-        "prompt_token_count": 374,
-        "candidates_token_count": 40,
-        "total_token_count": 414
+        "prompt_token_count": 410,
+        "candidates_token_count": 36,
+        "total_token_count": 446
       }
     }),
 )
@@ -304,7 +304,7 @@ GenerateContentResponse(
           "content": {
             "parts": [
               {
-                "text": "\ud559\ubc88: 2400323\n\uc774\ub984: \ubc15\ubbfc\uc11c\n\ud559\uacfc: \uc138\ubb34\ud68c\uacc4\uacfc(1)\n\uc7ac\ud559\uc5ec\ubd80: \uc54c \uc218 \uc5c6\uc74c \n"
+                "text": "\ud559\ubc88: 2400323, \uc774\ub984: \ubc15\ubbfc\uc11c, \ud559\uacfc: \uc138\ubb34\ud68c\uacc4\uacfc(1), \uc7ac\ud559\uc5ec\ubd80: \uc7ac\ud559 \n"
               }
             ],
             "role": "model"
@@ -332,9 +332,9 @@ GenerateContentResponse(
         }
       ],
       "usage_metadata": {
-        "prompt_token_count": 374,
-        "candidates_token_count": 40,
-        "total_token_count": 414
+        "prompt_token_count": 410,
+        "candidates_token_count": 36,
+        "total_token_count": 446
       }
     }),
 )
@@ -350,7 +350,7 @@ GenerateContentResponse(
           "content": {
             "parts": [
               {
-                "text": "\ud559\ubc88: 2200020\n\uc774\ub984: \uc815\uc608\ube48\n\ud559\uacfc: \uc2dc\uac01\ubbf8\ub514\uc5b4\ub514\uc790\uc778\uacfc(3)\n\uc7ac\ud559\uc5ec\ubd80: 3\ud559\ub144 A\ubc18 \n"
+                "text": "\ud559\ubc88: 2200020, \uc774\ub984: \uc815\uc608\ube48, \ud559\uacfc: \uc2dc\uac01\ubbf8\ub514\uc5b4\ub514\uc790\uc778\uacfc(3), \uc7ac\ud559\uc5ec\ubd80: \uc7ac\ud559 \n"
               }
             ],
             "role": "model"
@@ -378,9 +378,9 @@ GenerateContentResponse(
         }
       ],
       "usage_metadata": {
-        "prompt_token_count": 374,
-        "candidates_token_count": 44,
-        "total_token_count": 418
+        "prompt_token_count": 410,
+        "candidates_token_count": 38,
+        "total_token_count": 448
       }
     }),
 )
@@ -396,7 +396,7 @@ GenerateContentResponse(
           "content": {
             "parts": [
               {
-                "text": "\ud559\ubc88: 2451321\n\uc774\ub984: \uae40\ubbfc\uc9c0\n\ud559\uacfc: \uce58\uc704\uc0dd\uacfc(1)\n\uc7ac\ud559\uc5ec\ubd80: \uc7ac\ud559"
+                "text": "\ud559\ubc88: 2451321, \uc774\ub984: \uae40\ubbfc\uc9c0, \ud559\uacfc: \uce58\uc704\uc0dd\uacfc(1), \uc7ac\ud559\uc5ec\ubd80: \uc7ac\ud559 \n"
               }
             ],
             "role": "model"
@@ -424,9 +424,9 @@ GenerateContentResponse(
         }
       ],
       "usage_metadata": {
-        "prompt_token_count": 374,
-        "candidates_token_count": 37,
-        "total_token_count": 411
+        "prompt_token_count": 410,
+        "candidates_token_count": 35,
+        "total_token_count": 445
       }
     }),
 )
@@ -442,7 +442,7 @@ GenerateContentResponse(
           "content": {
             "parts": [
               {
-                "text": "\ud559\ubc88: 202403516\n\uc774\ub984: \uc774\ubbfc\uc7ac\n\ud559\uacfc: \uc2e0\uc785\uacbd\uc601\uacbd\ud559\uacfc\n\uc7ac\ud559\uc5ec\ubd80: \uc54c \uc218 \uc5c6\uc74c \n"
+                "text": "\ud559\ubc88: 202403516, \uc774\ub984: \uc774\ubbfc\uc7ac, \ud559\uacfc: \uc2e0\uc785\uacbd\uc601\ud559\uacfc, \uc7ac\ud559\uc5ec\ubd80: \uc7ac\ud559 \n"
               }
             ],
             "role": "model"
@@ -470,9 +470,9 @@ GenerateContentResponse(
         }
       ],
       "usage_metadata": {
-        "prompt_token_count": 374,
-        "candidates_token_count": 41,
-        "total_token_count": 415
+        "prompt_token_count": 410,
+        "candidates_token_count": 37,
+        "total_token_count": 447
       }
     }),
 )
@@ -488,7 +488,7 @@ GenerateContentResponse(
           "content": {
             "parts": [
               {
-                "text": "\ud559\ubc88: 202048791\n\uc774\ub984: \ubc15\ub3c4\ud604\n\ud559\uacfc: \uc0ac\ud559\uacfc\n\uc7ac\ud559\uc5ec\ubd80: \uc54c \uc218 \uc5c6\uc74c \n"
+                "text": "\ud559\ubc88: 202048791, \uc774\ub984: \ubc15\ub3c4\ud604, \ud559\uacfc: \uc0ac\ud559\uacfc, \uc7ac\ud559\uc5ec\ubd80: \uc7ac\ud559 \n"
               }
             ],
             "role": "model"
@@ -516,9 +516,9 @@ GenerateContentResponse(
         }
       ],
       "usage_metadata": {
-        "prompt_token_count": 374,
-        "candidates_token_count": 37,
-        "total_token_count": 411
+        "prompt_token_count": 410,
+        "candidates_token_count": 34,
+        "total_token_count": 444
       }
     }),
 )
@@ -534,7 +534,7 @@ GenerateContentResponse(
           "content": {
             "parts": [
               {
-                "text": "\ud559\ubc88: 202312586\n\uc774\ub984: \ucd5c\uc9c0\ud6c4\n\ud559\uacfc: \uc54c \uc218 \uc5c6\uc74c\n\uc7ac\ud559\uc5ec\ubd80: \uc54c \uc218 \uc5c6\uc74c \n"
+                "text": "\ud559\ubc88: 202312586, \uc774\ub984: \ucd5c\uc9c0\ud6c4, \ud559\uacfc: \uc54c \uc218 \uc5c6\uc74c, \uc7ac\ud559\uc5ec\ubd80: \uc7ac\ud559"
               }
             ],
             "role": "model"
@@ -562,9 +562,9 @@ GenerateContentResponse(
         }
       ],
       "usage_metadata": {
-        "prompt_token_count": 374,
-        "candidates_token_count": 38,
-        "total_token_count": 412
+        "prompt_token_count": 410,
+        "candidates_token_count": 35,
+        "total_token_count": 445
       }
     }),
 )
@@ -580,7 +580,7 @@ GenerateContentResponse(
           "content": {
             "parts": [
               {
-                "text": "\ud559\ubc88: 202479048\n\uc774\ub984: \uc815\uc2b9\ud604\n\ud559\uacfc: \uc601\uc5b4\ud559\ubd80\n\uc7ac\ud559\uc5ec\ubd80: \uc54c \uc218 \uc5c6\uc74c \n"
+                "text": "\ud559\ubc88: 202479048, \uc774\ub984: \uc815\uc2b9\ud604, \ud559\uacfc: \uc601\uc5b4\ud559\ubd80, \uc7ac\ud559\uc5ec\ubd80: \uc7ac\ud559 \n"
               }
             ],
             "role": "model"
@@ -608,9 +608,9 @@ GenerateContentResponse(
         }
       ],
       "usage_metadata": {
-        "prompt_token_count": 374,
-        "candidates_token_count": 38,
-        "total_token_count": 412
+        "prompt_token_count": 410,
+        "candidates_token_count": 35,
+        "total_token_count": 445
       }
     }),
 )
@@ -626,7 +626,7 @@ GenerateContentResponse(
           "content": {
             "parts": [
               {
-                "text": "\ud559\ubc88: 201901311\n\uc774\ub984: \uac15\ud0dc\uc724\n\ud559\uacfc: \uc54c\ub808\uc774.\uc778\ub3c4\ub124\uc2dc\uc544\uc5b4\uacfc\n\uc7ac\ud559\uc5ec\ubd80: \uc54c \uc218 \uc5c6\uc74c \n"
+                "text": "\ud559\ubc88: 201901311, \uc774\ub984: \uac15\ud0dc\uc724, \ud559\uacfc: \uc54c\ub808\uc774.\uc778\ub3c4\ub124\uc2dc\uc544\uc5b4\uacfc, \uc7ac\ud559\uc5ec\ubd80: \uc7ac\ud559 \n"
               }
             ],
             "role": "model"
@@ -654,9 +654,9 @@ GenerateContentResponse(
         }
       ],
       "usage_metadata": {
-        "prompt_token_count": 374,
-        "candidates_token_count": 43,
-        "total_token_count": 417
+        "prompt_token_count": 410,
+        "candidates_token_count": 40,
+        "total_token_count": 450
       }
     }),
 )
@@ -672,7 +672,7 @@ GenerateContentResponse(
           "content": {
             "parts": [
               {
-                "text": "\ud559\ubc88: 201863215\n\uc774\ub984: \uc624\uc2dc\uc6b0\n\ud559\uacfc: \ud2f1\ud1a1\uae30.\uc544\uc7ac\ub974\ubc14\uc774\uc794\uc5b4\uacfc\n\uc7ac\ud559\uc5ec\ubd80: \uc54c \uc218 \uc5c6\uc74c \n"
+                "text": "\ud559\ubc88: 201863215, \uc774\ub984: \uc624\uc2dc\uc6b0, \ud559\uacfc: \ud2f1\ud1a1\uae30\uc5d0.\uc544\uc81c\ub974\ubc14\uc774\uc794\uc5b4\uacfc, \uc7ac\ud559\uc5ec\ubd80: \uc7ac\ud559 \n"
               }
             ],
             "role": "model"
@@ -700,9 +700,9 @@ GenerateContentResponse(
         }
       ],
       "usage_metadata": {
-        "prompt_token_count": 374,
-        "candidates_token_count": 47,
-        "total_token_count": 421
+        "prompt_token_count": 410,
+        "candidates_token_count": 44,
+        "total_token_count": 454
       }
     }),
 )
@@ -718,7 +718,7 @@ GenerateContentResponse(
           "content": {
             "parts": [
               {
-                "text": "\ud559\ubc88: 202413151\n\uc774\ub984: \ud55c\ud604\uc6b0\n\ud559\uacfc: \uc735\ud569\uc778\ubb38\uc9c0\uc5ed\ud559\ubd80\n\uc7ac\ud559\uc5ec\ubd80: \uc54c \uc218 \uc5c6\uc74c \n"
+                "text": "\ud559\ubc88: 202413151, \uc774\ub984: \ud55c\ud604\uc6b0, \ud559\uacfc:  \uc735\ud569\uc77c\ubcf8\uc9c0\uc5ed\ud559\ubd80, \uc7ac\ud559\uc5ec\ubd80: \uc7ac\ud559 \n"
               }
             ],
             "role": "model"
@@ -746,9 +746,9 @@ GenerateContentResponse(
         }
       ],
       "usage_metadata": {
-        "prompt_token_count": 374,
-        "candidates_token_count": 43,
-        "total_token_count": 417
+        "prompt_token_count": 410,
+        "candidates_token_count": 39,
+        "total_token_count": 449
       }
     }),
 )
@@ -764,7 +764,7 @@ GenerateContentResponse(
           "content": {
             "parts": [
               {
-                "text": "\ud559\ubc88: 202394600\n\uc774\ub984: \uc7a5\uc608\uc900\n\ud559\uacfc: \uc678\uad6d\uc5b4\uad50\uc721\ud559\ubd80(\uc911\uad6d\uc5b4\uad50\uc721\uc804\uacf5)\n\uc7ac\ud559\uc5ec\ubd80: \uc54c \uc218 \uc5c6\uc74c \n"
+                "text": "\ud559\ubc88: 202394600, \uc774\ub984: \uc7a5\uc608\uc900, \ud559\uacfc: \uc678\uad6d\uc5b4\uad50\uc721\ud559\ubd80(\uc911\uad6d\uc5b4\uad50\uc721\uc804\uacf5), \uc7ac\ud559\uc5ec\ubd80: \uc7ac\ud559 \n"
               }
             ],
             "role": "model"
@@ -792,9 +792,9 @@ GenerateContentResponse(
         }
       ],
       "usage_metadata": {
-        "prompt_token_count": 374,
-        "candidates_token_count": 50,
-        "total_token_count": 424
+        "prompt_token_count": 410,
+        "candidates_token_count": 46,
+        "total_token_count": 456
       }
     }),
 )
@@ -810,7 +810,7 @@ GenerateContentResponse(
           "content": {
             "parts": [
               {
-                "text": "\ud559\ubc88: 202331002\n\uc774\ub984: \uc724\uc8fc\uc624\n\ud559\uacfc: \uad50\uc721\ud559\uc804\uacf5\n\uc7ac\ud559\uc5ec\ubd80: \uc54c \uc218 \uc5c6\uc74c \n"
+                "text": "\ud559\ubc88: 202331002, \uc774\ub984: \uc724\uc8fc\uc624, \ud559\uacfc: \uad50\uc721\ud559\uc804\uacf5, \uc7ac\ud559\uc5ec\ubd80: \uc7ac\ud559 \n"
               }
             ],
             "role": "model"
@@ -838,9 +838,9 @@ GenerateContentResponse(
         }
       ],
       "usage_metadata": {
-        "prompt_token_count": 374,
-        "candidates_token_count": 38,
-        "total_token_count": 412
+        "prompt_token_count": 410,
+        "candidates_token_count": 35,
+        "total_token_count": 445
       }
     }),
 )
@@ -856,7 +856,7 @@ GenerateContentResponse(
           "content": {
             "parts": [
               {
-                "text": "\ud559\ubc88: 202005520\n\uc774\ub984: \uae40\uc11c\uc900\n\ud559\uacfc: \ucef4\ud4e8\ud130.\uc804\uc790\uc2dc\uc2a4\ud15c\uacf5\ud559\uc804\uacf5\n\uc7ac\ud559\uc5ec\ubd80: \uc54c \uc218 \uc5c6\uc74c \n"
+                "text": "\ud559\ubc88: 202005520, \uc774\ub984: \uae40\uc11c\uc900, \ud559\uacfc: \ucef4\ud4e8\ud130.\uc804\uc790\uc2dc\uc2a4\ud15c\uacf5\ud559\uc804\uacf5, \uc7ac\ud559\uc5ec\ubd80: \uc7ac\ud559 \n"
               }
             ],
             "role": "model"
@@ -884,9 +884,9 @@ GenerateContentResponse(
         }
       ],
       "usage_metadata": {
-        "prompt_token_count": 374,
-        "candidates_token_count": 47,
-        "total_token_count": 421
+        "prompt_token_count": 410,
+        "candidates_token_count": 44,
+        "total_token_count": 454
       }
     }),
 )
