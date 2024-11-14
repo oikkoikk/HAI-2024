@@ -1,2 +1,4 @@
 test_img/
 .env
+.DS_Store
+./images/
