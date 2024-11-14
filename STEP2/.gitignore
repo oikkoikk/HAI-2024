@@ -1,1 +1,3 @@
 test_img/
+.env
+__pycache__/
