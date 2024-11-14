@@ -39,8 +39,8 @@ def analyze_image(image_path):
                         "text": (
                             "주어진 이미지가 모바일 학생증 이미지인지 판단해 줘. "
                             "학번은 무조건 6자리 이상의 숫자로 인식해. 학번, 이름 정보가 없다면 모바일 학생증이 아니야. "
-                            "만약 모바일 학생증 이미지라면 학번, 이름, 학과, 재학여부를 찾아 "
-                            "다음 형식으로 출력해 줘: '학번: [학번], 이름: [이름], 학과: [학과], 재학여부: [재학여부]'. "
+                            "만약 모바일 학생증 이미지라면 학번, 이름, 학과, 학교, 재학여부를 찾아 "
+                            "다음 형식으로 출력해 줘: '학번: [학번], 이름: [이름], 학과: [학과], 학교: [학교], 재학여부: [재학여부]'. "
                             "재학여부는 '재학', '휴학', '졸업' 중 하나로 출력해 줘. "
                             "이미지를 통해 알 수 없는 정보는 '알 수 없음' 이라고 출력해 줘. "
                             "읽은 글자가 문맥에 맞지 않거나 잘못 읽은 걸로 판단된다면 정보를 유추하거나 '알 수 없음'으로 처리해."
@@ -69,14 +69,45 @@ def analyze_image(image_path):
 # CSV 파일로 저장 함수
 def save_to_csv(data, csv_filename="student_data.csv"):
     # CSV 파일의 헤더 정의
-    fieldnames = ["index", "university", "department", "name", "student-id", "path"]
+    fieldnames = ["index", "university", "department", "name", "student-id", "status", "path"]
     with open(csv_filename, mode="w", newline='', encoding="utf-8") as file:
         writer = csv.DictWriter(file, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(data)
     print(f"Data saved to {csv_filename}")
 
-# 메인 코드
+# 응답 파싱 및 데이터 수집
+def parse_response(idx, text_response, image_path):
+    # 기본 값 설정
+    student_info = {
+        "index": idx,
+        "university": "알 수 없음",
+        "department": "알 수 없음",
+        "name": "알 수 없음",
+        "student-id": "알 수 없음",
+        "status": "알 수 없음",
+        "path": image_path
+    }
+
+    # 응답 텍스트를 줄바꿈, 쉼표, 그리고 ' - '로 분리하여 각 항목 파싱
+    parts = text_response.replace("\n", ",").replace("-", ",").split(",")  # 줄바꿈, ' - '와 쉼표로 분리
+
+    for part in parts:
+        part = part.strip()  # 공백 제거
+        if part.startswith("학번:"):
+            student_info["student-id"] = part.replace("학번:", "").strip()
+        elif part.startswith("이름:"):
+            student_info["name"] = part.replace("이름:", "").strip()
+        elif part.startswith("학과:"):
+            student_info["department"] = part.replace("학과:", "").strip()
+        elif part.startswith("학교:"):
+            student_info["university"] = part.replace("학교:", "").strip()
+        elif part.startswith("재학여부:"):
+            student_info["status"] = part.replace("재학여부:", "").strip()
+    
+    return student_info
+
+# 메인 함수
 def main(image_paths):
     data = []
     for idx, path in enumerate(image_paths):
@@ -85,39 +116,22 @@ def main(image_paths):
             # OpenAI 응답에서 필요한 정보 추출
             text_response = result['choices'][0]['message']['content']
             
-            # GPT-4 응답 텍스트 그대로 출력
-            print(f"GPT-4 Response for Image {idx+1}:\n{text_response}")
-            print("-" * 40)
+            # # GPT-4 응답 텍스트 그대로 출력
+            # print(f"GPT-4 Response for Image {idx+1}:\n{text_response}")
+            # print("-" * 40)
 
-            # 데이터를 CSV 형식으로 변환
-            student_info = {
-                "index": idx,
-                "university": "알 수 없음",  # university 정보 추출 가능 시 업데이트
-                "department": "알 수 없음",  # department 정보 추출 가능 시 업데이트
-                "name": "알 수 없음",
-                "student-id": "알 수 없음",
-                "path": path
-            }
-            
-            # 텍스트에서 정보를 추출하여 student_info에 업데이트 (간단한 파싱)
-            for line in text_response.split(", "):
-                if "학번:" in line:
-                    student_info["student-id"] = line.replace("학번:", "").strip()
-                elif "이름:" in line:
-                    student_info["name"] = line.replace("이름:", "").strip()
-                elif "학과:" in line:
-                    student_info["department"] = line.replace("학과:", "").strip()
-                elif "재학여부:" in line:
-                    student_info["university"] = line.replace("재학여부:", "").strip()
-            
-            # 결과를 터미널에 출력
-            print(f"Processed Image {idx+1}:")
+            # 파싱하여 학생 정보 수집
+            student_info = parse_response(idx, text_response, path)
+
+            # 추출된 정보를 터미널에 출력
+            print(f"Extracted Information for Image {idx+1}:")
             print(f"  학번: {student_info['student-id']}")
             print(f"  이름: {student_info['name']}")
             print(f"  학과: {student_info['department']}")
-            print(f"  재학여부: {student_info['university']}")
+            print(f"  학교: {student_info['university']}")
+            print(f"  재학여부: {student_info['status']}")
             print(f"  경로: {student_info['path']}")
-            print("-" * 40)
+            print("=" * 40)
 
             data.append(student_info)
 
@@ -134,7 +148,6 @@ image_paths = [
     "/Users/mac/Desktop/HAI-2024/images/ku.png",
     "/Users/mac/Desktop/HAI-2024/images/yonsei.png"
 ]
-
 
 # 실행
 main(image_paths)
