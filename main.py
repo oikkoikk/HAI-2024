@@ -6,9 +6,10 @@ import streamlit as st
 from datetime import datetime
 
 def get_APIkey():
-    with open("API_KEY.txt") as f:
-        API_KEY = f.read()
-    return API_KEY
+    # with open("API_KEY.txt") as f:
+    #     API_KEY = f.read()
+    # return API_KEY
+    return os.environ.get('Gemini_KEY')
 
 def send_request(image_path, API_KEY):
     PATH = os.getcwd() + '\\images'
@@ -30,7 +31,7 @@ def send_request(image_path, API_KEY):
     try:
         return response.text
     except:
-        raise Exception("알 수 없는 이유로 응답을 받지 못했습니다.")
+        raise RuntimeError("알 수 없는 이유로 응답을 받지 못했습니다.")
     
 img_file = st.file_uploader('전자 학생증의 캡쳐화면을 업로드하세요.', type=['png','jpg', 'jpeg'])
 API_KEY = get_APIkey()
@@ -49,8 +50,10 @@ if img_file:
         st.success(result)
     except FileNotFoundError:
         st.error('파일을 저장하지 못했습니다.')
-    except Exception as e:
+    except RuntimeError as e:
         st.error(e)
+    except:
+        st.error('처리 과정에서 에러가 발생했습니다.')
     finally:
         tmp.empty()
     
