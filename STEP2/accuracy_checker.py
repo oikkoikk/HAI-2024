@@ -20,6 +20,9 @@ def calculate_accuracy(ground_truth_path, prediction_path):
     
     # gt_df에서 pred_df에 없는 index 걸러내기
     gt_df = gt_df[gt_df['index'].isin(pred_df['index'])]
+    
+    gt_df = gt_df.sort_values(by='index')
+    pred_df = pred_df.sort_values(by='index')
 
     for column in columns:
         # 각 필드별 정확도 계산
@@ -57,7 +60,7 @@ def print_accuracy_report(accuracies, total_accuracy, error_cases):
     print(f"\n전체 정확도: {total_accuracy:.2f}%")
     print("\n각 필드별 정확도:")
     for field, accuracy in accuracies.items():
-        print(f"- {field}: {accuracy:.2f}%")
+        print(f"- {field.ljust(12)}: {accuracy:.2f}%")
     
     print("\n=== 오류 사례 분석 ===")
     for field, errors in error_cases.items():
