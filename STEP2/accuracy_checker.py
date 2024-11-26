@@ -23,7 +23,8 @@ def calculate_accuracy(ground_truth_path, prediction_path):
 
     for column in columns:
         # 각 필드별 정확도 계산
-        correct_predictions = (gt_df.set_index('index')[column] == pred_df.set_index('index')[column]).sum()
+        correct_predictions = ((gt_df.set_index('index')[column] == pred_df.set_index('index')[column]) | 
+                       (gt_df.set_index('index')[column].isna() & pred_df.set_index('index')[column].isna())).sum()
         total_predictions = len(gt_df)
         accuracy = (correct_predictions / total_predictions) * 100
         accuracies[column] = accuracy

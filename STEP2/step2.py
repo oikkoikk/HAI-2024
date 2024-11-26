@@ -155,4 +155,5 @@ def analyze_image(image_path):
 
 if __name__ == "__main__":
     test_img_path = r"./test_img/7.png"
-    analyze_image(test_img_path)
+    data = analyze_image(test_img_path)
+    print(data)
