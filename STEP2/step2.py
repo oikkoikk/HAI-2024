@@ -106,11 +106,11 @@ def analyze_image(image_path):
     image_base64 = encode_image_base64(image_path)
     ocr_text = analyze_image_pororo(image_path)
     req = request_openai(image_base64, ocr_text)
-    print(req)
     return req
 
 # TODO: 병렬 처리나 배치는 나중에 생각해보셔도 될 것 같아요.
 
 if __name__ == "__main__":
     test_img_path = r"./test_img/7.png"
-    analyze_image(test_img_path)
+    req = analyze_image(test_img_path)
+    print(req)
