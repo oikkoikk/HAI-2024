@@ -4,6 +4,7 @@ import json
 from dotenv import load_dotenv
 from openai import OpenAI
 from pororo import Pororo
+import csv
 
 # .env 파일에서 API 키 로드
 load_dotenv()
@@ -101,6 +102,48 @@ def request_openai(image_base64, ocr_text):
         print(e)
         return None
 
+#dataset_path 경로의 모든 이미지를 분석하고 결과를 CSV 파일로 저장하는 함수
+def analyze_dataset(dataset_path, output_csv="analyzed_results.csv"):
+    all_results = []
+    
+    for university in os.listdir(dataset_path):
+        university_path = os.path.join(dataset_path, university)
+        
+        if os.path.isdir(university_path):
+            print(f"\nProcessing university: {university}")
+            
+            for img_file in os.listdir(university_path):
+                if img_file.endswith('.png'):
+                    img_path = os.path.join(university_path, img_file)
+                    try:
+                        print(f"Processing {img_path}...")
+                        result = analyze_image(img_path)
+                        if result:
+                            data = {
+                                "index": len(all_results) + 1,
+                                "university": result.get("university", "None"),
+                                "department": result.get("department", "None"),
+                                "name": result.get("name", "None"),
+                                "student-id": result.get("student_id", "None"),
+                                "status": result.get("status", "None"),
+                                "path": img_path
+                            }
+                            all_results.append(data)
+                            print(f"Successfully processed {img_path}")
+                    except Exception as e:
+                        print(f"Error processing {img_path}: {str(e)}")
+    
+    if all_results:
+        fieldnames = ["index", "university", "department", "name", "student-id", "status", "path"]
+        with open(output_csv, mode="w", newline='', encoding="utf-8") as file:
+            writer = csv.DictWriter(file, fieldnames=fieldnames)
+            writer.writeheader()
+            writer.writerows(all_results)
+        print(f"\nAll data saved to {output_csv}")
+        print(f"Total processed images: {len(all_results)}")
+    
+    return all_results
+
 # openai + pororo
 def analyze_image(image_path):
     image_base64 = encode_image_base64(image_path)
@@ -112,5 +155,4 @@ def analyze_image(image_path):
 
 if __name__ == "__main__":
     test_img_path = r"./test_img/7.png"
-    req = analyze_image(test_img_path)
-    print(req)
+    analyze_image(test_img_path)
