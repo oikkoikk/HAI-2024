@@ -1,0 +1,6 @@
+API_KEY.txt
+output.txt
+__pycache__
+.env
+images/*
+!images/.gitkeep
