@@ -1,6 +1,6 @@
 API_KEY.txt
 output.txt
 __pycache__
-.env
+feature/STEP1
+.streamlit
 images/*
-!images/.gitkeep
