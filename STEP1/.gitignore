@@ -1,5 +1,6 @@
 API_KEY.txt
 output.txt
 __pycache__
+feature/STEP1
 .streamlit
 images/*
